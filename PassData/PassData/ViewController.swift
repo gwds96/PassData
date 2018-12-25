@@ -1,11 +1,7 @@
 import UIKit
 
-class ViewController: UIViewController, PassDataDelegate {
-    
-    func Show(string: String) {
-        lblShow.text = string
-    }
-    
+class ViewController: UIViewController {
+
     @IBOutlet weak var lblShow: UILabel!
     
     @IBAction func OK(_ sender: UIButton) {
@@ -16,3 +12,8 @@ class ViewController: UIViewController, PassDataDelegate {
     }
 }
 
+extension ViewController: PassDataDelegate {
+    func Show(string: String) {
+        lblShow.text = string
+    }
+}
