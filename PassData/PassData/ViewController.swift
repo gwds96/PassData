@@ -10,13 +10,6 @@ class ViewController: UIViewController {
         screen.show = { [weak self] (text) in
             self?.lblShow.text = text
         }
-//        screen.delegate = self
     navigationController?.pushViewController(screen, animated: true)
     }
 }
-//
-//extension ViewController: PassDataDelegate {
-//    func Show(string: String) {
-//        lblShow.text = string
-//    }
-//}
