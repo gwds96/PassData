@@ -1,20 +1,18 @@
-//
-//  ViewController.swift
-//  PassData
-//
-//  Created by Datt-D1 on 12/25/18.
-//  Copyright © 2018 Datt-D1. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController, PassDataDelegate {
+    
+    func Show(string: String) {
+        lblShow.text = string
     }
-
-
+    
+    @IBOutlet weak var lblShow: UILabel!
+    
+    @IBAction func OK(_ sender: UIButton) {
+        let db = UIStoryboard(name: "Main", bundle: nil)
+        let screen = db.instantiateViewController(withIdentifier: "screen2") as! VCScreen2
+        screen.delegate = self
+    navigationController?.pushViewController(screen, animated: true)
+    }
 }
 

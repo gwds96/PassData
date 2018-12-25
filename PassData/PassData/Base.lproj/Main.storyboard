@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="etY-eA-O0U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,103 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PassData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose text show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-kP-RIO">
+                                <rect key="frame" x="100" y="164" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkk-bK-wbw">
+                                <rect key="frame" x="172" y="205" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="OK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylz-IB-Nuk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pkk-bK-wbw" firstAttribute="top" secondItem="Xgl-kP-RIO" secondAttribute="bottom" constant="20" id="BOF-Vp-g0z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pkk-bK-wbw" secondAttribute="trailing" constant="173" id="Plp-hG-yCL"/>
+                            <constraint firstItem="Pkk-bK-wbw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="XaW-XW-Nvl"/>
+                            <constraint firstItem="Xgl-kP-RIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="meo-L4-CvI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xgl-kP-RIO" secondAttribute="trailing" constant="100" id="o85-r5-uE7"/>
+                            <constraint firstItem="Xgl-kP-RIO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ohM-ed-OVE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XnQ-5Z-LuD"/>
+                    <connections>
+                        <outlet property="lblShow" destination="Xgl-kP-RIO" id="GBU-ag-Ar2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="133.5832083958021"/>
+        </scene>
+        <!--Screen2-->
+        <scene sceneID="pQp-mn-7NL">
+            <objects>
+                <viewController storyboardIdentifier="screen2" id="Jpa-Ga-ep4" customClass="VCScreen2" customModule="PassData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C0q-6q-m03">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ja-pf-xIX">
+                                <rect key="frame" x="100" y="120" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-gm-1lE">
+                                <rect key="frame" x="164" y="200" width="46" height="30"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enter:" destination="Jpa-Ga-ep4" eventType="touchUpInside" id="ddg-yo-Tya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8ja-pf-xIX" firstAttribute="leading" secondItem="rsk-SW-hVd" secondAttribute="leading" constant="100" id="FsZ-4I-ySg"/>
+                            <constraint firstItem="rsk-SW-hVd" firstAttribute="trailing" secondItem="5sm-gm-1lE" secondAttribute="trailing" constant="165" id="KEX-A6-5f8"/>
+                            <constraint firstItem="5sm-gm-1lE" firstAttribute="leading" secondItem="rsk-SW-hVd" secondAttribute="leading" constant="164" id="hyo-NA-m9u"/>
+                            <constraint firstItem="8ja-pf-xIX" firstAttribute="top" secondItem="rsk-SW-hVd" secondAttribute="top" constant="100" id="nmg-1w-69W"/>
+                            <constraint firstItem="rsk-SW-hVd" firstAttribute="trailing" secondItem="8ja-pf-xIX" secondAttribute="trailing" constant="100" id="s16-VF-u6J"/>
+                            <constraint firstItem="5sm-gm-1lE" firstAttribute="top" secondItem="8ja-pf-xIX" secondAttribute="bottom" constant="50" id="vDc-Ij-vJf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rsk-SW-hVd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfShow" destination="8ja-pf-xIX" id="S06-Rm-Lon"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qo6-cS-OLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vKz-uc-VDl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="etY-eA-O0U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nzt-Re-PiA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ptI-pN-0bf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43d-Lg-meM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
