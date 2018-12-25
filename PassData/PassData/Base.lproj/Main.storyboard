@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose text show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-kP-RIO">
-                                <rect key="frame" x="100" y="164" width="175" height="21"/>
+                                <rect key="frame" x="50" y="164" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,8 +37,8 @@
                             <constraint firstItem="Pkk-bK-wbw" firstAttribute="top" secondItem="Xgl-kP-RIO" secondAttribute="bottom" constant="20" id="BOF-Vp-g0z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pkk-bK-wbw" secondAttribute="trailing" constant="173" id="Plp-hG-yCL"/>
                             <constraint firstItem="Pkk-bK-wbw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="XaW-XW-Nvl"/>
-                            <constraint firstItem="Xgl-kP-RIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="meo-L4-CvI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xgl-kP-RIO" secondAttribute="trailing" constant="100" id="o85-r5-uE7"/>
+                            <constraint firstItem="Xgl-kP-RIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="meo-L4-CvI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xgl-kP-RIO" secondAttribute="trailing" constant="50" id="o85-r5-uE7"/>
                             <constraint firstItem="Xgl-kP-RIO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ohM-ed-OVE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
