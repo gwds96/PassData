@@ -28,7 +28,7 @@
                                 <rect key="frame" x="172" y="205" width="30" height="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="OK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylz-IB-Nuk"/>
+                                    <action selector="pressOkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VK0-a7-kBx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,7 +45,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XnQ-5Z-LuD"/>
                     <connections>
-                        <outlet property="lblShow" destination="Xgl-kP-RIO" id="GBU-ag-Ar2"/>
+                        <outlet property="textShowLabel" destination="Xgl-kP-RIO" id="pdq-da-qWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,7 +70,7 @@
                                 <rect key="frame" x="164" y="200" width="46" height="30"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
-                                    <action selector="enter:" destination="Jpa-Ga-ep4" eventType="touchUpInside" id="ddg-yo-Tya"/>
+                                    <action selector="pressEnterButton:" destination="Jpa-Ga-ep4" eventType="touchUpInside" id="SUR-60-OGb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,7 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="rsk-SW-hVd"/>
                     </view>
                     <connections>
-                        <outlet property="tfShow" destination="8ja-pf-xIX" id="S06-Rm-Lon"/>
+                        <outlet property="textWillShowTF" destination="8ja-pf-xIX" id="Pjf-kZ-03c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo6-cS-OLD" userLabel="First Responder" sceneMemberID="firstResponder"/>

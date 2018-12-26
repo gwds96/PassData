@@ -2,22 +2,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var lblShow: UILabel!
+    @IBOutlet weak var textShowLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(lblShow(notification:)), name: .lblShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(lblShow(notification:)), name: .textChoose, object: nil)
     }
     
     @objc func lblShow(notification: Notification){
-        if let text = notification.userInfo {
-            if let choose = text["name"] as? String {
-                lblShow.text = choose
+        if let text = notification.userInfo,
+            let choose = text["name"] as? String {
+                textShowLabel.text = choose
             }
-        }
     }
     
-    @IBAction func OK(_ sender: UIButton) {
+    @IBAction func pressOkButton(_ sender: UIButton) {
         let db = UIStoryboard(name: "Main", bundle: nil)
         let screen = db.instantiateViewController(withIdentifier: "screen2") as! VCScreen2
     navigationController?.pushViewController(screen, animated: true)
@@ -25,5 +24,5 @@ class ViewController: UIViewController {
 }
 
 extension Notification.Name {
-    static let lblShow = Notification.Name("lblShow")
+    static let textChoose = Notification.Name("Show This Text")
 }

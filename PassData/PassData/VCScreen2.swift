@@ -1,10 +1,10 @@
 import UIKit
 class VCScreen2: UIViewController {
 
-    @IBOutlet weak var tfShow: UITextField!
+    @IBOutlet weak var textWillShowTF: UITextField!
     
-    @IBAction func enter(_ sender: UIButton) {
-        NotificationCenter.default.post(name: .lblShow, object: nil, userInfo: ["name": tfShow.text ?? ""])
+    @IBAction func pressEnterButton(_ sender: UIButton) {
+        NotificationCenter.default.post(name: .textChoose, object: nil, userInfo: ["name": textWillShowTF.text ?? ""])
     navigationController?.popViewController(animated: true)
     }
 }
